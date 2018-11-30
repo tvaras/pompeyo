@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PompeyoWCFService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPompeyoWCFService_crearMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearMarca" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarMarcas_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarMarcas" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarMarcas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarMarcasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarMarca" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearModelo" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelos_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelos" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelosDTO_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelosDTO" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelosDTO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelosDTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelosDTOCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelosDTOCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarModelosDTOCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarModelosDTOComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarModelo" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearCliente" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientes" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientesDTO_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientesDTO" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientesDTO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientesDTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientesDTOCombo_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientesDTOCombo" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarClientesDTOCombo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarClientesDTOComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearVenta" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_crearVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarVentas" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscarVenta" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_buscarVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarVentasDTO_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarVentasDTO" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_listarVentasDTO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarVentasDTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarVenta" />
+  </wsdl:message>
+  <wsdl:message name="IPompeyoWCFService_eliminarVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarVentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPompeyoWCFService">
+    <wsdl:operation name="crearMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearMarca" message="tns:IPompeyoWCFService_crearMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearMarcaResponse" message="tns:IPompeyoWCFService_crearMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarMarcas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarMarcas" message="tns:IPompeyoWCFService_listarMarcas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarMarcasResponse" message="tns:IPompeyoWCFService_listarMarcas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarMarca" message="tns:IPompeyoWCFService_eliminarMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarMarcaResponse" message="tns:IPompeyoWCFService_eliminarMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearModelo" message="tns:IPompeyoWCFService_crearModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearModeloResponse" message="tns:IPompeyoWCFService_crearModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarModelos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelos" message="tns:IPompeyoWCFService_listarModelos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelosResponse" message="tns:IPompeyoWCFService_listarModelos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarModelo" message="tns:IPompeyoWCFService_buscarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarModeloResponse" message="tns:IPompeyoWCFService_buscarModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarModelosDTO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelosDTO" message="tns:IPompeyoWCFService_listarModelosDTO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelosDTOResponse" message="tns:IPompeyoWCFService_listarModelosDTO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarModelosDTOCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelosDTOCombo" message="tns:IPompeyoWCFService_listarModelosDTOCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarModelosDTOComboResponse" message="tns:IPompeyoWCFService_listarModelosDTOCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarModelo" message="tns:IPompeyoWCFService_eliminarModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarModeloResponse" message="tns:IPompeyoWCFService_eliminarModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearCliente" message="tns:IPompeyoWCFService_crearCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearClienteResponse" message="tns:IPompeyoWCFService_crearCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientes" message="tns:IPompeyoWCFService_listarClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientesResponse" message="tns:IPompeyoWCFService_listarClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarCliente" message="tns:IPompeyoWCFService_buscarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarClienteResponse" message="tns:IPompeyoWCFService_buscarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarClientesDTO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientesDTO" message="tns:IPompeyoWCFService_listarClientesDTO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientesDTOResponse" message="tns:IPompeyoWCFService_listarClientesDTO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarClientesDTOCombo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientesDTOCombo" message="tns:IPompeyoWCFService_listarClientesDTOCombo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarClientesDTOComboResponse" message="tns:IPompeyoWCFService_listarClientesDTOCombo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarCliente" message="tns:IPompeyoWCFService_eliminarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarClienteResponse" message="tns:IPompeyoWCFService_eliminarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/login" message="tns:IPompeyoWCFService_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/loginResponse" message="tns:IPompeyoWCFService_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearVenta" message="tns:IPompeyoWCFService_crearVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/crearVentaResponse" message="tns:IPompeyoWCFService_crearVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarVentas" message="tns:IPompeyoWCFService_listarVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarVentasResponse" message="tns:IPompeyoWCFService_listarVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarVenta" message="tns:IPompeyoWCFService_buscarVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/buscarVentaResponse" message="tns:IPompeyoWCFService_buscarVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarVentasDTO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarVentasDTO" message="tns:IPompeyoWCFService_listarVentasDTO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/listarVentasDTOResponse" message="tns:IPompeyoWCFService_listarVentasDTO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarVenta" message="tns:IPompeyoWCFService_eliminarVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPompeyoWCFService/eliminarVentaResponse" message="tns:IPompeyoWCFService_eliminarVenta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPompeyoWCFService" type="tns:IPompeyoWCFService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="crearMarca">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/crearMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarMarcas">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarMarcas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarMarca">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/eliminarMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearModelo">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/crearModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarModelos">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarModelos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarModelo">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/buscarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarModelosDTO">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarModelosDTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarModelosDTOCombo">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarModelosDTOCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarModelo">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/eliminarModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearCliente">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/crearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarClientes">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarCliente">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/buscarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarClientesDTO">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarClientesDTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarClientesDTOCombo">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarClientesDTOCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/eliminarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearVenta">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/crearVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarVentas">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarVenta">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/buscarVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarVentasDTO">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/listarVentasDTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarVenta">
+      <soap:operation soapAction="http://tempuri.org/IPompeyoWCFService/eliminarVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PompeyoWCFService">
+    <wsdl:port name="BasicHttpBinding_IPompeyoWCFService" binding="tns:BasicHttpBinding_IPompeyoWCFService">
+      <soap:address location="http://localhost:58502/PompeyoWCFService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

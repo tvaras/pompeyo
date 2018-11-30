@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9cdc54f-2027-4731-86b0-37cf7b54dafa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58502/PompeyoWCFService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PompeyoWCFService.xsd" MetadataType="Schema" ID="c6710510-20e0-470f-b35e-1ea25742e928" SourceId="1" SourceUrl="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PompeyoWCFService.disco" MetadataType="Disco" ID="46d4ec32-5d9a-4012-90f4-4cb3807b6004" SourceId="1" SourceUrl="http://localhost:58502/PompeyoWCFService.svc?disco" />
+    <MetadataFile FileName="PompeyoWCFService.wsdl" MetadataType="Wsdl" ID="012b9b9d-ac05-445d-9b6a-47862c5e3b6f" SourceId="1" SourceUrl="http://localhost:58502/PompeyoWCFService.svc?wsdl" />
+    <MetadataFile FileName="PompeyoWCFService1.xsd" MetadataType="Schema" ID="09c97787-2f21-4573-8ac4-4f855826b619" SourceId="1" SourceUrl="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PompeyoWCFService2.xsd" MetadataType="Schema" ID="582103af-463b-4aa7-8c6f-b7664adaf453" SourceId="1" SourceUrl="http://localhost:58502/PompeyoWCFService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
